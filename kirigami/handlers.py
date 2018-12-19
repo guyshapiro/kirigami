@@ -23,7 +23,7 @@ import kirigami.settings
 
 
 def auth_handler(r, settings, logging):
-    ttl = int(settings.get('ttl', '60'))
+    ttl = int(settings['main']['ttl'])
 
     user = settings['main']['user']
     if not user:

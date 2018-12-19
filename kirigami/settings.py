@@ -45,6 +45,7 @@ def parse_config(location, logger):
     values['hostname'] = main.get('hostname', 'print')
     values['proto'] = main.get('proto', 'http')
     values['port'] = main.get('port', '9191')
+    values['ttl'] = main.get('ttl', '60')
 
     settings['main'] = values
 
