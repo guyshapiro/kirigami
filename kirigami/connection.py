@@ -68,6 +68,7 @@ class Remote(object):
         for value in userparams:
             args.append(value)
         auth = self.__connection.client.authenticateUser(*args)
+        return auth
 
     def clear_auth(self):
         res = self.__connection.client.clearAuthentication(*self.__identity)

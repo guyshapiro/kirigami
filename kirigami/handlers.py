@@ -34,7 +34,9 @@ def auth_handler(r, settings, logging):
         passwd = kirigami.tagger.retrieve_password()
 
     args = (user, passwd, ttl)
-    r.auth_user(args)
+    logging.debug('Auth with %r', args)
+    auth = r.auth_user(args)
+    logging.info('Server auth res %r', auth)
 
 
 def message_handler(r, settings, logging):
