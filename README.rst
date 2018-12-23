@@ -33,6 +33,14 @@ You can also download the project source and do::
 
   $ python3 setup.py install
 
+Running on container
+--------------------
+To build and run on container:
+  - Download this source direcotory
+  - Create a kirigami.conf file with the acount details. Add it to the source directory.
+  - Build image by running `docker build -t [image name/tag] .`
+  - Run image by running `docker run --rm -ti [image name/tag]` 
+
 Dependencies
 ------------
 `netifaces <https://pypi.python.org/pypi/netifaces>`_ is required for the
