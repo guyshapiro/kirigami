@@ -65,9 +65,9 @@ def cli():
     }
     logging.basicConfig(**log)
 
-    logging.info('Parsing Configuration from ~/.kirigami.conf')
+    logging.info('Parsing Configuration from kirigami.conf')
     settings = kirigami.settings.parse_config(
-        os.path.expanduser('~/.kirigami.conf'), logging)
+        os.path.expanduser('kirigami.conf'), logging)
 
     identity = kirigami.tagger.identity(settings['main']['user'])
     logging.debug('Identity tagged as %s', identity)
