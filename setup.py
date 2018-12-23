@@ -27,7 +27,7 @@ setup(
         'Topic :: Printing'
     ],
     install_requires=[
-        'netifaces',
+#        'netifaces',
     ],
     entry_points={
         'console_scripts': [
