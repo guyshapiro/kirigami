@@ -69,7 +69,7 @@ def cli():
     settings = kirigami.settings.parse_config(
         os.path.expanduser('~/.kirigami.conf'), logging)
 
-    identity = kirigami.tagger.identity()
+    identity = kirigami.tagger.identity(settings['main']['user'])
     logging.debug('Identity tagged as %s', identity)
 
     r = Remote(settings['main'], identity)

@@ -23,8 +23,11 @@ import socket
 import getpass
 
 
-def identity():
-    user = getpass.getuser()
+def identity(preset_user):
+    if not preset_user:
+        user = getpass.getuser()
+    else:
+        user = preset_user
     hostname = socket.gethostname()
     ipaddrs = ["127.0.0.1"]
     ip = ','.join(ipaddrs)
