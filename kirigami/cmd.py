@@ -30,6 +30,7 @@ from .connection import Remote
 
 
 def main(r, settings):
+    r.clear_auth()
     while True:
         logging.debug('Getting Actions from Remote.')
         try:

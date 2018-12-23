@@ -69,6 +69,10 @@ class Remote(object):
             args.append(value)
         auth = self.__connection.client.authenticateUser(*args)
 
+    def clear_auth(self):
+        res = self.__connection.client.clearAuthentication(*self.__identity)
+
+
     def user_messages(self):
         msg = self.__connection.client.getUserMessages(*self.__identity)
         return msg
